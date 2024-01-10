@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./main.css">
+  
+</head>
+<body>
+  
+
+<section id="baby-weight" class="baby-weight">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12 mb-3">
+                <h4><span>Maternal Health Risk Calculator</span></h4>
+              </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-xl-10">
+                <div class="card p-1 text-center">
+                   
+                </div>
+            </div>
+            
+            <div class="col-xl-10">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="{% url 'maternal_health_risk' %}" method="POST">
+                            
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <label for="motherage" class="form-label text-left">Mother's Age: </label>
+                                    <input type="number" class="form-control mx-auto" id="mother" name="mother"
+                                        placeholder="Enter Mother's age" min="18" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="sbp" class="form-label text-left">Systolic Blood Pressure :
+                                    </label>
+                                    <input type="number" class="form-control mx-auto" id="sbp"
+                                        name="sbp" placeholder="Enter Systolic Blood Pressure :" 
+                                        required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="dsbp" class="form-label text-left" id="dia">Diastolic Blood Pressure :
+                                    </label>
+                                    <input type="number" class="form-control mx-auto" id="dsbp"
+                                        name="dsbp" placeholder="Enter Diastolic Blood Pressure :" 
+                                        required>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <label for="bt" class="form-label text-left">Body Temperature : </label>
+                                    <input type="number" step="0.01" class="form-control mx-auto" id="bt" name="bt"
+                                        placeholder="Enter Body Temperature" required>
+                                </div>
+                               
+                               
+                            </div>
+                            <div class="text-center mt-5">
+                                <button type="submit" class="btn btn-submit bb" id="bttn">Calculate Risk Factor</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            
+            
+        </div>
+    </div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
